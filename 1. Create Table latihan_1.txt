@@ -1,0 +1,31 @@
+MariaDB [(none)]> create database tugas_6;
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [(none)]> use tugas_6;
+Database changed
+MariaDB [tugas_6]> create table latihan_1(
+    -> a int(10) unsigned primary key auto_increment,
+    -> b varchar(10) not null default 'merdeka'
+    -> ) character set ascii engine=MyISAM auto_increment=100;
+Query OK, 0 rows affected (0.009 sec)
+
+MariaDB [tugas_6]> show create table latihan_1;
++-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Table     | Create Table                                                                                                                                                                                          |
++-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| latihan_1 | CREATE TABLE `latihan_1` (
+  `a` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `b` varchar(10) NOT NULL DEFAULT 'merdeka',
+  PRIMARY KEY (`a`)
+) ENGINE=MyISAM AUTO_INCREMENT=100 DEFAULT CHARSET=ascii |
++-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.001 sec)
+
+MariaDB [tugas_6]> desc latihan_1;
++-------+------------------+------+-----+---------+----------------+
+| Field | Type             | Null | Key | Default | Extra          |
++-------+------------------+------+-----+---------+----------------+
+| a     | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| b     | varchar(10)      | NO   |     | merdeka |                |
++-------+------------------+------+-----+---------+----------------+
+2 rows in set (0.005 sec)

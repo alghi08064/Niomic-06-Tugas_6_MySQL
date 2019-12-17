@@ -1,0 +1,17 @@
+MariaDB [tugas_6]> alter table latihan_1 ENGINE=InnoDB;
+Query OK, 0 rows affected (0.083 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [tugas_6]> show alter table latihan_1;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'alter table latihan_1' at line 1
+MariaDB [tugas_6]> show create table latihan_1;
++-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Table     | Create Table                                                                                                                                                                                          |
++-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| latihan_1 | CREATE TABLE `latihan_1` (
+  `a` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `b` varchar(10) NOT NULL DEFAULT 'merdeka',
+  PRIMARY KEY (`a`)
+) ENGINE=InnoDB AUTO_INCREMENT=100 DEFAULT CHARSET=ascii |
++-----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.003 sec)

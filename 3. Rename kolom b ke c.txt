@@ -1,0 +1,27 @@
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use tugas_6;
+Database changed
+MariaDB [tugas_6]> desc latihan_1;
++-------+------------------+------+-----+---------+----------------+
+| Field | Type             | Null | Key | Default | Extra          |
++-------+------------------+------+-----+---------+----------------+
+| a     | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| b     | varchar(10)      | NO   |     | merdeka |                |
++-------+------------------+------+-----+---------+----------------+
+2 rows in set (0.007 sec)
+
+MariaDB [tugas_6]> alter table latihan_1 change b c varchar(10) not null default 'merdeka';
+Query OK, 0 rows affected (0.024 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [tugas_6]> desc latihan_1;
++-------+------------------+------+-----+---------+----------------+
+| Field | Type             | Null | Key | Default | Extra          |
++-------+------------------+------+-----+---------+----------------+
+| a     | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| c     | varchar(10)      | NO   |     | merdeka |                |
++-------+------------------+------+-----+---------+----------------+
+2 rows in set (0.006 sec)

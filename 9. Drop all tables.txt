@@ -1,0 +1,22 @@
+MariaDB [tugas_6]> show tables;
++-------------------+
+| Tables_in_tugas_6 |
++-------------------+
+| latihan_1         |
+| latihan_3         |
++-------------------+
+2 rows in set (0.001 sec)
+
+MariaDB [tugas_6]> desc latihan_4;
++-------+-----------+------+-----+---------------------+-------------------------------+
+| Field | Type      | Null | Key | Default             | Extra                         |
++-------+-----------+------+-----+---------------------+-------------------------------+
+| a     | timestamp | NO   |     | current_timestamp() | on update current_timestamp() |
++-------+-----------+------+-----+---------------------+-------------------------------+
+1 row in set (0.006 sec)
+
+MariaDB [tugas_6]> drop table latihan_1, latihan_3, latihan_4;
+Query OK, 0 rows affected (0.022 sec)
+
+MariaDB [tugas_6]> show tables;
+Empty set (0.001 sec)

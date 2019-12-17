@@ -1,0 +1,22 @@
+MariaDB [tugas_6]> desc latihan_1;
++-------+------------------+------+-----+---------+----------------+
+| Field | Type             | Null | Key | Default | Extra          |
++-------+------------------+------+-----+---------+----------------+
+| a     | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| c     | varchar(10)      | NO   |     | merdeka |                |
++-------+------------------+------+-----+---------+----------------+
+2 rows in set (0.006 sec)
+
+MariaDB [tugas_6]> alter table latihan_1 add column b date not null default '2018-01-01'after a;
+Query OK, 0 rows affected (0.014 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [tugas_6]> desc latihan_1;
++-------+------------------+------+-----+------------+----------------+
+| Field | Type             | Null | Key | Default    | Extra          |
++-------+------------------+------+-----+------------+----------------+
+| a     | int(10) unsigned | NO   | PRI | NULL       | auto_increment |
+| b     | date             | NO   |     | 2018-01-01 |                |
+| c     | varchar(10)      | NO   |     | merdeka    |                |
++-------+------------------+------+-----+------------+----------------+
+3 rows in set (0.006 sec)

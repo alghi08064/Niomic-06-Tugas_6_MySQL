@@ -1,0 +1,13 @@
+MariaDB [tugas_6]> create temporary table latihan_4 (
+    -> a timestamp
+    -> );
+Query OK, 0 rows affected (0.007 sec)
+
+MariaDB [tugas_6]> desc latihan_4
+    -> ;
++-------+-----------+------+-----+---------------------+-------------------------------+
+| Field | Type      | Null | Key | Default             | Extra                         |
++-------+-----------+------+-----+---------------------+-------------------------------+
+| a     | timestamp | NO   |     | current_timestamp() | on update current_timestamp() |
++-------+-----------+------+-----+---------------------+-------------------------------+
+1 row in set (0.006 sec)
